@@ -1,0 +1,17 @@
+# Nagłówki HTTP dla hostingu, który obsługuje plik _headers (Cloudflare Pages, Netlify).
+# GitHub Pages go nie obsługuje — tam działa tylko CSP z <meta> w każdym pliku HTML.
+# CSP musi być taka sama jak w <meta> (plus frame-ancestors, które działa wyłącznie w nagłówku).
+/*
+  Content-Security-Policy: default-src 'none'; script-src 'self' 'sha256-Fnqz5usUp8S/g5ODVF9xJPYz32ws6yMzLYae2Eng40Q='; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=(), browsing-topics=()
+  Cross-Origin-Opener-Policy: same-origin
+  Strict-Transport-Security: max-age=31536000
+
+# Obrazy i font zmieniają się rzadko. Po podmianie pliku nadaj mu nową nazwę, żeby odwiedzający nie widzieli starej wersji.
+/assets/images/*
+  Cache-Control: public, max-age=2592000
+/assets/fonts/*
+  Cache-Control: public, max-age=2592000

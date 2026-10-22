@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="pl" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-Fnqz5usUp8S/g5ODVF9xJPYz32ws6yMzLYae2Eng40Q='; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'none'; object-src 'none'" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Informacja o dostępności – Eryk Czarnota</title>
+    <meta
+      name="description"
+      content="Jak dbam o dostępność tej strony: standard WCAG 2.2 AA, metody testowania, znane ograniczenia i sposób zgłaszania problemów."
+    />
+    <link rel="canonical" href="https://erykcz93.github.io/portfolio/dostepnosc.html" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#f7f7f4" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#121418" media="(prefers-color-scheme: dark)" />
+    <meta name="author" content="Eryk Czarnota" />
+    <!-- Ustawia motyw przed narysowaniem strony. Nie zmieniaj tej linii: jej skrót SHA-256 jest w CSP powyżej (patrz README). -->
+    <!-- prettier-ignore -->
+    <script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('motyw');if(t==='ciemny'){d.dataset.theme='dark'}else if(t==='jasny'){d.dataset.theme='light'}}catch(e){}})();</script>
+    <link
+      rel="preload"
+      href="assets/fonts/atkinson-hyperlegible-next-pl-wght.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="icon" href="favicon.ico" sizes="32x32" />
+    <link rel="icon" href="assets/images/icons/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/images/icons/apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pl_PL" />
+    <meta property="og:site_name" content="Eryk Czarnota" />
+    <meta property="og:title" content="Informacja o dostępności – Eryk Czarnota" />
+    <meta
+      property="og:description"
+      content="Jak dbam o dostępność tej strony: standard WCAG 2.2 AA, metody testowania, znane ograniczenia i sposób zgłaszania problemów."
+    />
+    <meta property="og:url" content="https://erykcz93.github.io/portfolio/dostepnosc.html" />
+    <meta property="og:image" content="https://erykcz93.github.io/portfolio/assets/images/og/strona-glowna.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Eryk Czarnota — projektowanie i tworzenie stron internetowych" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Informacja o dostępności – Eryk Czarnota" />
+    <meta
+      name="twitter:description"
+      content="Jak dbam o dostępność tej strony: standard WCAG 2.2 AA, metody testowania, znane ograniczenia i sposób zgłaszania problemów."
+    />
+    <meta name="twitter:image" content="https://erykcz93.github.io/portfolio/assets/images/og/strona-glowna.jpg" />
+    <meta name="twitter:image:alt" content="Eryk Czarnota — projektowanie i tworzenie stron internetowych" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://erykcz93.github.io/portfolio/#witryna",
+            "url": "https://erykcz93.github.io/portfolio/",
+            "name": "Eryk Czarnota",
+            "inLanguage": "pl-PL",
+            "publisher": { "@id": "https://erykcz93.github.io/portfolio/#osoba" }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Strona główna",
+                "item": "https://erykcz93.github.io/portfolio/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Informacja o dostępności",
+                "item": "https://erykcz93.github.io/portfolio/dostepnosc.html"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body id="top">
+    <!-- Zestaw ikon strony. Użycie: <svg class="icon" width="24" height="24" aria-hidden="true" focusable="false"><use href="#i-nazwa"></use></svg> -->
+    <!-- prettier-ignore -->
+    <svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+      <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+      <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+      <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+      <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4.5h5.5V10M19.5 4.5L11 13"/><path d="M17.5 14v4.5a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1v-11a1 1 0 0 1 1-1H10"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7"/></symbol>
+      <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.1"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 7l8 6 8-6"/></symbol>
+      <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="11.5" height="11.5" rx="2"/><path d="M15.5 8.5V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7.5a2 2 0 0 0 2 2h2.5"/></symbol>
+      <symbol id="i-code" viewBox="0 0 24 24"><path d="M8.5 7l-5 5 5 5M15.5 7l5 5-5 5M13.5 4.5l-3 15"/></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6L6 6M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4L6 18M18 6l1.4-1.4"/></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24"><path d="M19.5 14.6A8 8 0 0 1 9.4 4.5a8 8 0 1 0 10.1 10.1z"/></symbol>
+      <symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2"/><circle cx="8.5" cy="11" r="2"/><path d="M5.8 15.6c.6-1.3 1.6-2 2.7-2s2.1.7 2.7 2M14 10h4M14 13.5h3"/></symbol>
+      <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></symbol>
+      <symbol id="i-frame" viewBox="0 0 24 24"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"/><path d="M7.5 15.5l2.8-3.3 2.2 2.3 1.6-1.8 2.4 2.8"/></symbol>
+      <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1.1 12.1a1 1 0 0 1-1 .9H7.1a1 1 0 0 1-1-.9z"/><path d="M9 10V6.5a3 3 0 0 1 6 0V10"/></symbol>
+      <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M19.5 11A7.8 7.8 0 0 0 5.6 6.6M4.5 13a7.8 7.8 0 0 0 13.9 4.4"/><path d="M5 3v4h4M19 21v-4h-4"/></symbol>
+      <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M4.2 17.5a8.6 8.6 0 1 1 15.6 0"/><path d="M12 13.5l4.2-4.2"/><circle cx="12" cy="13.5" r="1.2"/><path d="M8 17.5h8"/></symbol>
+      <symbol id="i-devices" viewBox="0 0 24 24"><rect x="2.5" y="4" width="15" height="10.5" rx="1.5"/><path d="M7 18.5h5M9.5 14.5v4"/><rect x="15.5" y="9.5" width="6" height="10.5" rx="1.3"/></symbol>
+      <symbol id="i-access" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="7.4" r="1.3"/><path d="M7.5 10.2l4.5.9 4.5-.9M12 11.1v3.3l-2.4 3.9M12 14.4l2.4 3.9"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7.5 3v5.6c0 4.5-3.2 8.1-7.5 9.4-4.3-1.3-7.5-4.9-7.5-9.4V6z"/><path d="M8.8 12.1l2.2 2.2 4.4-4.4"/></symbol>
+      <symbol id="i-structure" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="4.5" rx="1"/><rect x="3" y="16.5" width="6" height="4.5" rx="1"/><rect x="15" y="16.5" width="6" height="4.5" rx="1"/><path d="M12 7.5V12M6 16.5V12h12v4.5"/></symbol>
+    </svg>
+    <div class="sentinel sentinel--header" data-header-sentinel aria-hidden="true"></div>
+    <div class="sentinel sentinel--top" data-top-sentinel aria-hidden="true"></div>
+    <a class="skip-link" href="#tresc">Przejdź do treści</a>
+    <header class="site-header" data-header>
+      <div class="container site-header__inner">
+        <a class="brand" href="index.html">
+          <svg class="brand__mark" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true" focusable="false">
+            <path
+              d="M5 12.5V5h7.5M27 19.5V27h-7.5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="square"
+            />
+            <rect x="12.75" y="12.75" width="6.5" height="6.5" rx="1.5" fill="currentColor" />
+          </svg>
+          <span class="brand__name">Eryk Czarnota</span> <span class="brand__tagline">strony internetowe</span>
+          <span class="visually-hidden">— strona główna</span>
+        </a>
+        <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="menu-glowne" data-menu-toggle>
+          <span class="menu-toggle__bars" aria-hidden="true"></span> <span class="menu-toggle__label">Menu</span>
+        </button>
+        <nav id="menu-glowne" class="site-nav" aria-label="Główna">
+          <ul class="site-nav__list" role="list">
+            <li><a class="site-nav__link" href="index.html#realizacje" data-spy="realizacje"> Realizacje </a></li>
+            <li><a class="site-nav__link" href="index.html#oferta" data-spy="oferta"> Oferta </a></li>
+            <li><a class="site-nav__link" href="index.html#o-mnie" data-spy="o-mnie"> O&nbsp;mnie </a></li>
+            <li><a class="site-nav__link" href="index.html#faq" data-spy="faq"> FAQ </a></li>
+          </ul>
+          <a class="btn btn--primary site-nav__cta" href="index.html#kontakt" data-spy="kontakt">Kontakt</a>
+        </nav>
+        <button type="button" class="theme-toggle" aria-pressed="false" data-theme-toggle>
+          <span class="theme-toggle__moon">
+            <svg class="icon" width="24" height="24" aria-hidden="true" focusable="false">
+              <use href="#i-moon"></use>
+            </svg>
+          </span>
+          <span class="theme-toggle__sun">
+            <svg class="icon" width="24" height="24" aria-hidden="true" focusable="false">
+              <use href="#i-sun"></use>
+            </svg>
+          </span>
+          <span class="visually-hidden">Tryb ciemny</span>
+        </button>
+      </div>
+    </header>
+    <main id="tresc" tabindex="-1">
+      <div class="container legal">
+        <nav class="breadcrumbs" aria-label="Ścieżka nawigacji">
+          <ol role="list">
+            <li><a href="index.html">Strona główna</a></li>
+            <li aria-current="page">Informacja o&nbsp;dostępności</li>
+          </ol>
+        </nav>
+        <h1>Informacja o&nbsp;dostępności</h1>
+        <div class="prose">
+          <p class="lead">
+            Chcę, żeby z&nbsp;tej strony mógł wygodnie korzystać każdy&nbsp;— także osoby korzystające z&nbsp;czytników
+            ekranu, nawigujące klawiaturą, powiększające tekst lub ograniczające animacje.
+          </p>
+          <h2>Standard</h2>
+          <p>
+            Strona jest projektowana i&nbsp;tworzona zgodnie z&nbsp;wytycznymi <strong>WCAG 2.2 na poziomie AA</strong>.
+            Zgodności nie deklaruję wyłącznie na podstawie narzędzi automatycznych&nbsp;— poniżej opisuję, co zostało
+            sprawdzone i&nbsp;czego jeszcze nie zweryfikowano.
+          </p>
+          <h2>Co zostało zrobione</h2>
+          <ul>
+            <li>
+              semantyczna struktura: obszary nagłówka, nawigacji, treści i&nbsp;stopki, jeden nagłówek H1
+              i&nbsp;logiczna hierarchia nagłówków,
+            </li>
+            <li>link „Przejdź do treści”, pełna obsługa klawiaturą i&nbsp;jednakowo wyraźny wskaźnik fokusu,</li>
+            <li>
+              kontrast tekstu co najmniej 4,5 : 1 i&nbsp;elementów interfejsu co najmniej 3 : 1&nbsp;— w&nbsp;motywie
+              jasnym i&nbsp;ciemnym,
+            </li>
+            <li>przyciski i&nbsp;odnośniki o&nbsp;wysokości co najmniej 44&nbsp;px,</li>
+            <li>tekst alternatywny dla zrzutów ekranu, ikony dekoracyjne ukryte przed czytnikami ekranu,</li>
+            <li>
+              animacje wyłączane przy ustawieniu „ogranicz ruch” w&nbsp;systemie; brak treści migających
+              i&nbsp;przewijanych automatycznie,
+            </li>
+            <li>układ działający przy powiększeniu do 400% (szerokość 320&nbsp;px) bez przewijania w&nbsp;poziomie,</li>
+            <li>język strony oznaczony w&nbsp;kodzie (polski), polska typografia,</li>
+            <li>
+              krój pisma Atkinson Hyperlegible Next zaprojektowany z&nbsp;myślą o&nbsp;czytelności dla osób
+              słabowidzących.
+            </li>
+          </ul>
+          <h2>Jak strona została sprawdzona&nbsp;— i&nbsp;czego jeszcze nie sprawdzono</h2>
+          <ul>
+            <li>
+              automatycznie: axe-core (reguły WCAG 2.0–2.2 A&nbsp;i&nbsp;AA) i&nbsp;Lighthouse&nbsp;— na każdej
+              podstronie, w&nbsp;obu motywach, na szerokości telefonu i&nbsp;komputera,
+            </li>
+            <li>
+              testami w&nbsp;przeglądarkach Chromium i&nbsp;WebKit: obsługa klawiaturą (kolejność, fokus, menu, FAQ),
+              szerokość 320&nbsp;px (odpowiednik powiększenia 400%), zwiększone odstępy tekstu, ograniczenie ruchu, tryb
+              wysokiego kontrastu, działanie bez JavaScriptu,
+            </li>
+            <li>
+              przeglądem wizualnym zrzutów stron w&nbsp;motywie jasnym i&nbsp;ciemnym, na telefonie i&nbsp;komputerze,
+            </li>
+            <li>
+              wstępnym testem z&nbsp;czytnikiem ekranu NVDA (Windows): wczytanie strony, przejście do treści
+              i&nbsp;nawigacja po nagłówkach działają poprawnie. Pełnego testu z&nbsp;czytnikami ekranu (NVDA,
+              VoiceOver) i&nbsp;z&nbsp;udziałem użytkowników technologii wspomagających jeszcze nie przeprowadzono.
+            </li>
+          </ul>
+          <p>Data ostatniego przeglądu: 22 października 2026.</p>
+          <h2>Znane ograniczenia</h2>
+          <ul>
+            <li>
+              W&nbsp;sekcji „Dlaczego warto” etykiety na zrzucie ekranu są na wąskich ekranach ukryte, bo byłyby
+              nieczytelne. Te same informacje są podane w&nbsp;tekście obok zrzutu.
+            </li>
+            <li>
+              Odnośniki „Zobacz projekt” otwierają strony realizacji w&nbsp;nowej karcie&nbsp;— informuje o&nbsp;tym
+              ikona i&nbsp;tekst dla czytników ekranu. Dostępność tych stron jest opisana osobno w&nbsp;ich
+              repozytoriach.
+            </li>
+          </ul>
+          <h2>Zgłoś problem</h2>
+          <p>
+            Jeśli coś na stronie jest dla Ciebie niedostępne albo niewygodne, napisz:
+            <a href="mailto:erykcz0393@protonmail.com?subject=Zapytanie%20o%20stron%C4%99%20internetow%C4%85"
+              >erykcz0393@protonmail.com</a
+            >. Opisz, czego dotyczy problem i&nbsp;z&nbsp;jakiego urządzenia lub oprogramowania korzystasz&nbsp;—
+            poprawię to najszybciej, jak to możliwe.
+          </p>
+          <h2>Podstawa prawna</h2>
+          <p>
+            Strona prowadzona jest przez osobę prywatną, a&nbsp;nie przez podmiot publiczny, więc nie dotyczy jej
+            obowiązek publikowania deklaracji dostępności z&nbsp;ustawy z&nbsp;dnia 4 kwietnia 2019&nbsp;r.
+            o&nbsp;dostępności cyfrowej stron internetowych i&nbsp;aplikacji mobilnych podmiotów publicznych. Ta
+            informacja jest publikowana dobrowolnie.
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container site-footer__grid">
+        <div class="site-footer__about">
+          <a class="brand" href="index.html">
+            <svg class="brand__mark" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true" focusable="false">
+              <path
+                d="M5 12.5V5h7.5M27 19.5V27h-7.5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="square"
+              />
+              <rect x="12.75" y="12.75" width="6.5" height="6.5" rx="1.5" fill="currentColor" />
+            </svg>
+            <span class="brand__name">Eryk Czarnota</span> <span class="visually-hidden">— strona główna</span>
+          </a>
+          <p>
+            Projektowanie i&nbsp;tworzenie stron internetowych dla firm i&nbsp;specjalistów&nbsp;— czytelnych, szybkich
+            i&nbsp;dostępnych na każdym urządzeniu.
+          </p>
+          <p class="site-footer__privacy">
+            <svg class="icon" width="24" height="24" aria-hidden="true" focusable="false">
+              <use href="#i-shield"></use>
+            </svg>
+            <span>Ta strona nie używa plików cookie ani narzędzi śledzących.</span>
+          </p>
+        </div>
+        <nav class="site-footer__col" aria-labelledby="stopka-strona">
+          <h2 id="stopka-strona" class="site-footer__title">Na stronie</h2>
+          <ul role="list">
+            <li><a href="index.html#realizacje">Realizacje</a></li>
+            <li><a href="index.html#oferta">Oferta</a></li>
+            <li><a href="index.html#pod-lupa">Podejście</a></li>
+            <li><a href="index.html#proces">Współpraca</a></li>
+            <li><a href="index.html#o-mnie">O&nbsp;mnie</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+          </ul>
+        </nav>
+        <nav class="site-footer__col" aria-labelledby="stopka-realizacje">
+          <h2 id="stopka-realizacje" class="site-footer__title">Realizacje</h2>
+          <ul role="list">
+            <li><a href="realizacje/luma-salon-fryzjerski.html">LUMA Studio Fryzur</a></li>
+            <li><a href="realizacje/aldervane-firma-budowlana.html">Aldervane Construction</a></li>
+            <li><a href="realizacje/sg-sklep-odziezowy.html">S&amp;G</a></li>
+            <li><a href="realizacje.html">Wszystkie realizacje</a></li>
+          </ul>
+        </nav>
+        <div class="site-footer__col">
+          <h2 class="site-footer__title">Kontakt</h2>
+          <ul role="list">
+            <li>
+              <a href="mailto:erykcz0393@protonmail.com?subject=Zapytanie%20o%20stron%C4%99%20internetow%C4%85"
+                >erykcz0393@protonmail.com</a
+              >
+            </li>
+            <li><a href="https://github.com/erykcz93">GitHub</a></li>
+            <li><a href="polityka-prywatnosci.html">Polityka prywatności</a></li>
+            <li><a href="dostepnosc.html">Informacja o&nbsp;dostępności</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container site-footer__meta">
+        <p>© <span data-current-year>2026</span> Eryk Czarnota. Wszelkie prawa zastrzeżone.</p>
+        <p class="site-footer__note">
+          Zrzuty ekranu przedstawiają projekty demonstracyjne z&nbsp;przykładowymi danymi.
+        </p>
+        <a class="site-footer__top" href="#top">
+          Na górę
+          <svg class="icon" width="24" height="24" aria-hidden="true" focusable="false">
+            <use href="#i-arrow-up"></use>
+          </svg>
+        </a>
+      </div>
+    </footer>
+    <!-- Pojawia się po przewinięciu ok. 400 px (assets/js/main.js). Zwykły odnośnik — działa też bez skryptów. --><a
+      class="to-top"
+      href="#top"
+      data-to-top
+    >
+      <svg class="icon" width="24" height="24" aria-hidden="true" focusable="false"><use href="#i-arrow-up"></use></svg>
+      <span class="visually-hidden">Wróć na górę strony</span>
+    </a>
+    <p class="visually-hidden" role="status" aria-live="polite" data-announcer></p>
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>
