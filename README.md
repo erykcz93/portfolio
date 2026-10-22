@@ -119,5 +119,4 @@ Aktualne wersje Chrome, Edge, Firefox i Safari (macOS, iOS) oraz Chrome na Andro
 ## Historia
 
 22.10.2026 — migracja z Astro na czysty HTML, CSS i JavaScript (wygląd i funkcje bez zmian, sprawdzone porównaniem zrzutów piksel po pikselu). Kopia wersji Astro: `kopia-zapasowa/portfolio-astro-2026-10-22.zip` (poza repozytorium).
-#   p o r t f o l i o  
- 
+#
