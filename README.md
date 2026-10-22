@@ -115,8 +115,3 @@ Licencje fontu, narzędzi i treści: [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICEN
 ## Przeglądarki
 
 Aktualne wersje Chrome, Edge, Firefox i Safari (macOS, iOS) oraz Chrome na Androidzie. Funkcje nowsze niż 2023 r. (`:has()`, `content-visibility`, płynne rozwijanie FAQ) są ulepszeniami — bez nich strona działa w pełni.
-
-## Historia
-
-22.10.2026 — migracja z Astro na czysty HTML, CSS i JavaScript (wygląd i funkcje bez zmian, sprawdzone porównaniem zrzutów piksel po pikselu). Kopia wersji Astro: `kopia-zapasowa/portfolio-astro-2026-10-22.zip` (poza repozytorium).
-#
